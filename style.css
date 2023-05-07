@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+
+body {
+    overflow: hidden;
+    background-color: rgb(29, 27, 27);
+    font-family: 'Azeret Mono', monospace;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.square {
+    cursor: pointer;
+    width: 12rem;
+    height: 12rem;
+    background-color: rgb(196, 24, 24);
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.square:hover {
+    opacity: 0.7;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Circle */
+
+.O {
+    background-color: rgb(29, 27, 27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+}
+
+.O::before {
+    position: absolute;
+    content: " ";
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(196, 24, 24);
+    border-radius: 50%;
+}
+
+.O::after {
+    position: absolute;
+    content: " ";
+    height: 6rem;
+    width: 6rem;
+    background-color: rgb(29, 27, 27);
+    border-radius: 50%;
+}
+
+
+/* Cross */
+
+.X {
+    background-color: rgb(29, 27, 27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 12rem;
+    height: 12rem;
+}
+
+
+.X:before,
+.X:after {
+    border-radius: 5px;
+    position: absolute;
+    content: ' ';
+    height: 10rem;
+    width: 2rem;
+    background-color: rgb(196, 24, 24);
+}
+
+.X:before {
+    transform: rotate(45deg);
+}
+
+.X:after {
+    transform: rotate(-45deg);
+}
+
+
+.result {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(29, 27, 27);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 50vw;
+    height: 50vh;
+    background-color: rgb(196, 24, 24);
+    color: rgb(29, 27, 27);
+    cursor: pointer;
+}
+
+
+.text {
+    margin: 0;
+    padding: 0;
+}
+
+.winner {
+    font-size: 7rem;
+}
+
+.message {
+    font-size: 5rem;
+}
+
+
+.restart {
+    font-weight: 700;
+    font-size: 1rem;
+    width: 36.2rem;
+    height: 2rem;
+    border: solid 1px black;
+    background-color: rgb(29, 27, 27);
+    color: rgb(196, 24, 24);
+    border-radius: 3px;
+    transition: .5s ease-in-out
+}
+
+.restart:hover {
+    cursor: pointer;
+    background-color: rgb(196, 24, 24);
+    color: rgb(29, 27, 27);
+}
+
+.placar {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 12rem;
+    height: 36rem;
+    background-color: rgb(29, 27, 27);
+    color: rgb(196, 24, 24);
+}
+
+.placarSymbol {
+    margin: 0;
+    padding: 0;
+    font-size: 8rem;
+}
+
+.placarNumber {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 6rem;
+}
