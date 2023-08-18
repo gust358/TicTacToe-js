@@ -103,6 +103,8 @@ function handleClick(event) {
             let square = document.getElementById(position);
             if (square.className === "square") {
                 square.className = `square ${symbol}`
+            } else {
+                return;
             }
             let arr = loadPlays();
             checkVictory(arr);
