@@ -189,3 +189,30 @@ body {
     padding: 0;
     font-size: 6rem;
 }
+
+
+@media only screen and (max-width:1000px) {
+    .container {
+        width: 1000px;
+        height: 240vh;
+    }
+
+    .placarSymbol {
+        font-size: 4rem;
+    }
+
+    .placarNumber {
+        font-size: 2rem;
+    }
+
+    .result {
+        width: 1010px;
+        height: 100%;
+    }
+
+    .box {
+        width: 600px;
+        height: 60vh;
+    }
+
+}
